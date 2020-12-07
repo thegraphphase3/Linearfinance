@@ -1,6 +1,7 @@
 type Transfertx @entity {
   id: ID!
   from: Bytes!
+  erc20Symbol: Bytes!
   to: Bytes!
   value: BigInt!
   transaction: Bytes! # tx hash
@@ -33,6 +34,17 @@ type Adminchangedtx @entity {
 type ProxyUpdatedtx @entity {
   id: ID!
   proxyupdate: Bytes!
+  numberBlock: BigInt
+  author: Bytes!
+  transaction: Bytes!
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+}
+
+type candidateChangedtx @entity {
+  id: ID!
+  oldCandidate: Bytes!
+  newCandidate: Bytes!
   numberBlock: BigInt
   author: Bytes!
   transaction: Bytes!

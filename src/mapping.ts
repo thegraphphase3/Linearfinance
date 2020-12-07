@@ -1,13 +1,22 @@
-import { Transfer, Approval, AdminChanged, ProxyUpdated } from '../generated/LinearFinance/LinearFinance'
-import { Transfertx, Approvaltx, Adminchangedtx, ProxyUpdatedtx } from '../generated/schema'
+import { Transfer, Approval, AdminChanged, ProxyUpdated, candidateChanged } from '../generated/LinearFinance/LinearFinance'
+import { Transfertx, Approvaltx, Adminchangedtx, ProxyUpdatedtx, candidateChangedtx } from '../generated/schema'
+import { LinearFinance } from '../generated/LinearFinance/LinearFinance'
+
 
 export function handleTransfer(event: Transfer): void {
-  let id = event.params.to
-            .toHexString()
-            .concat('-')
-            .concat(event.logIndex.toString())
+  let id = event.transaction.hash.toHex()
+
+  // contrat import
+  let contract = LinearFinance.bind(event.address)
+
+  // récup infos
+  let erc20Symbol = contract.symbol()
 
   let transfertx = new Transfertx(id)
+
+  //transfertx.erc20Symbol = s.toI32(erc20Symbol)
+
+  //transfertx.erc20Symbol = s.params.from
 
   transfertx.from = event.params.from
   transfertx.to = event.params.to
@@ -21,10 +30,8 @@ export function handleTransfer(event: Transfer): void {
 }
 
 export function handleApproval(event: Approval): void {
-  let id = event.params.owner
-            .toHexString()
-            .concat('-')
-            .concat(event.logIndex.toString())
+  let id = event.transaction.hash.toHex()
+
 
   let Approvaltx = new Approvaltx(id)
 
@@ -73,3 +80,21 @@ export function handleProxyUpdated(event: ProxyUpdated): void {
 
    ProxyUpdated.save()
  }
+
+ export function handlecandidateChanged(event: candidateChanged): void {
+    let id = event.transaction.hash.toHex()
+
+    let candidateChanged = new candidateChangedtx(id)
+
+    candidateChanged.oldCandidate = event.params.oldCandidate
+    candidateChanged.newCandidate = event.params.newCandidate
+
+    candidateChanged.numberBlock = event.block.number
+    candidateChanged.author = event.block.author
+
+    candidateChanged.transaction = event.transaction.hash
+    candidateChanged.blockNumber = event.block.number
+    candidateChanged.blockTimestamp = event.block.timestamp
+
+    candidateChanged.save()
+  }
