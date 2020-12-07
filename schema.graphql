@@ -29,3 +29,14 @@ type Adminchangedtx @entity {
   blockNumber: BigInt!
   blockTimestamp: BigInt!
 }
+
+type ProxyUpdatedtx @entity {
+  id: ID!
+  proxyupdate: Bytes!
+  numberBlock: BigInt
+  author: Bytes!
+  transaction: Bytes!
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+}
+

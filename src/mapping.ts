@@ -1,5 +1,5 @@
-import { Transfer, Approval, AdminChanged } from '../generated/LinearFinance/LinearFinance'
-import { Transfertx, Approvaltx, Adminchangedtx } from '../generated/schema'
+import { Transfer, Approval, AdminChanged, ProxyUpdated } from '../generated/LinearFinance/LinearFinance'
+import { Transfertx, Approvaltx, Adminchangedtx, ProxyUpdatedtx } from '../generated/schema'
 
 export function handleTransfer(event: Transfer): void {
   let id = event.params.to
@@ -40,19 +40,36 @@ export function handleApproval(event: Approval): void {
 }
 
 export function handlePauseChanged(event: AdminChanged): void {
-  let id = event.transaction.hash.toHex()
+   let id = event.transaction.hash.toHex()
 
-  let Adminchanged = new Adminchangedtx(id)
+   let Adminchanged = new Adminchangedtx(id)
 
-  Adminchanged.oldAdmin = event.params.oldAdmin
-  Adminchanged.newAdmin = event.params.newAdmin
+   Adminchanged.oldAdmin = event.params.oldAdmin
+   Adminchanged.newAdmin = event.params.newAdmin
 
-  Adminchanged.numberBlock = event.block.number
-  Adminchanged.author = event.block.author
+   Adminchanged.numberBlock = event.block.number
+   Adminchanged.author = event.block.author
 
-  Adminchanged.transaction = event.transaction.hash
-  Adminchanged.blockNumber = event.block.number
-  Adminchanged.blockTimestamp = event.block.timestamp
+   Adminchanged.transaction = event.transaction.hash
+   Adminchanged.blockNumber = event.block.number
+   Adminchanged.blockTimestamp = event.block.timestamp
 
-  Adminchanged.save()
+   Adminchanged.save()
 }
+
+export function handleProxyUpdated(event: ProxyUpdated): void {
+   let id = event.transaction.hash.toHex()
+
+   let ProxyUpdated = new ProxyUpdatedtx(id)
+
+   ProxyUpdated.proxyupdate = event.params.proxyAddress
+
+   ProxyUpdated.numberBlock = event.block.number
+   ProxyUpdated.author = event.block.author
+
+   ProxyUpdated.transaction = event.transaction.hash
+   ProxyUpdated.blockNumber = event.block.number
+   ProxyUpdated.blockTimestamp = event.block.timestamp
+
+   ProxyUpdated.save()
+ }

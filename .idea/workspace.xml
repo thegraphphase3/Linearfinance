@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="075e79ea-c2d8-42c9-8529-43ab7ee0e192" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/contracts/LinearFinance.sol" afterDir="false" />
+    <list default="true" id="075e79ea-c2d8-42c9-8529-43ab7ee0e192" name="Default Changelist" comment="second">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abis/Decent.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/Decent.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/schema.graphql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mapping.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapping.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subgraph.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/subgraph.yaml" afterDir="false" />
@@ -113,26 +109,34 @@
       <option name="project" value="LOCAL" />
       <updated>1607332140965</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="second">
+      <created>1607347904295</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607347904295</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first" />
-    <option name="LAST_COMMIT_MESSAGE" value="first" />
+    <MESSAGE value="second" />
+    <option name="LAST_COMMIT_MESSAGE" value="second" />
   </component>
   <component name="WindowStateProjectService">
     <state x="342" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607333591182">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="342" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1607333591182" />
-    <state x="264" y="2" key="CommitChangelistDialog2" timestamp="1607332140000">
+    <state x="264" y="2" key="CommitChangelistDialog2" timestamp="1607348381587">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="264" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607332140000" />
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1607332146437">
+    <state x="264" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607348381587" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1607347909646">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607332146437" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607347909646" />
     <state x="317" y="232" key="com.intellij.ide.util.TipDialog" timestamp="1607333264353">
       <screen x="0" y="0" width="1280" height="800" />
     </state>

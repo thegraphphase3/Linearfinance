@@ -19,6 +19,7 @@ dataSources:
         - Transfertx
         - Approvaltx
         - Adminchangedtx
+        - ProxyUpdatedtx
       abis:
         - name: LinearFinance
           file: ./abis/LinearFinance.json
@@ -29,5 +30,7 @@ dataSources:
           handler: handleApproval
         - event: AdminChanged(address,address)
           handler: handleAdminChanged
+        - event: ProxyUpdated(address)
+          handler: handleProxyUpdated
 
       file: ./src/mapping.ts
