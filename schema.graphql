@@ -3,5 +3,17 @@ type Transfertx @entity {
   from: Bytes!
   to: Bytes!
   value: BigInt!
+  transaction: Bytes! # tx hash
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
 }
 
+type Approvaltx @entity {
+  id: ID!
+  owner: Bytes!
+  spender: Bytes!
+  value: BigInt!
+  transaction: Bytes! # tx hash
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+}
