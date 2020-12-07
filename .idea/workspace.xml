@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="075e79ea-c2d8-42c9-8529-43ab7ee0e192" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/contracts/LinearFinance.sol" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abis/Decent.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/Decent.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/schema.graphql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mapping.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapping.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subgraph.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/subgraph.yaml" afterDir="false" />
@@ -17,6 +16,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -24,10 +26,21 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1lK3RogyMEuKQtNTG5vk70K79BT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/abis" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/abis" />
+    </key>
   </component>
   <component name="SbtLocalSettings">
     <option name="projectSyncType">
@@ -93,6 +106,36 @@
       <option name="presentableId" value="Default" />
       <updated>1607331950491</updated>
     </task>
+    <task id="LOCAL-00001" summary="first">
+      <created>1607332140965</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607332140965</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first" />
+    <option name="LAST_COMMIT_MESSAGE" value="first" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="342" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607333591182">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="342" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1607333591182" />
+    <state x="264" y="2" key="CommitChangelistDialog2" timestamp="1607332140000">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="264" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607332140000" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1607332146437">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607332146437" />
+    <state x="317" y="232" key="com.intellij.ide.util.TipDialog" timestamp="1607333264353">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="317" y="232" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1607333264353" />
   </component>
 </project>

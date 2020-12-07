@@ -1,5 +1,5 @@
-import { Transfer, Approval } from '../generated/Decent/Decent'
-import { Transfertx, Approvaltx } from '../generated/schema'
+import { Transfer, Approval, AdminChanged } from '../generated/LinearFinance/LinearFinance'
+import { Transfertx, Approvaltx, Adminchangedtx } from '../generated/schema'
 
 export function handleTransfer(event: Transfer): void {
   let id = event.params.to
@@ -37,4 +37,22 @@ export function handleApproval(event: Approval): void {
   Approvaltx.blockTimestamp = event.block.timestamp
 
   Approvaltx.save()
+}
+
+export function handlePauseChanged(event: AdminChanged): void {
+  let id = event.transaction.hash.toHex()
+
+  let Adminchanged = new Adminchangedtx(id)
+
+  Adminchanged.oldAdmin = event.params.oldAdmin
+  Adminchanged.newAdmin = event.params.newAdmin
+
+  Adminchanged.numberBlock = event.block.number
+  Adminchanged.author = event.block.author
+
+  Adminchanged.transaction = event.transaction.hash
+  Adminchanged.blockNumber = event.block.number
+  Adminchanged.blockTimestamp = event.block.timestamp
+
+  Adminchanged.save()
 }

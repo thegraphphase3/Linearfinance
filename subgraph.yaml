@@ -1,15 +1,16 @@
 specVersion: 0.0.2
-description:  Decentribe governance token
-repository: https://github.com/thegraphphase3/Decentsubgraph
+description:  LinearFinance token
+repository: https://github.com/thegraphphase3/Linearfinance
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
-    name: Decent
+    name: LinearFinance
     network: mainnet
     source:
-      address: '0x900b1998a226cfe238ba1a14f03eb934c513c20b'
-      abi: Decent
+      address: '0x3E9BC21C9b189C09dF3eF1B824798658d5011937'
+      abi: LinearFinance
+      startBlock: 10873784
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -17,12 +18,16 @@ dataSources:
       entities:
         - Transfertx
         - Approvaltx
+        - Adminchangedtx
       abis:
-        - name: Decent
-          file: ./abis/Decent.json
+        - name: LinearFinance
+          file: ./abis/LinearFinance.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
         - event: Approval(indexed address,indexed address,uint256)
           handler: handleApproval
+        - event: AdminChanged(address,address)
+          handler: handleAdminChanged
+
       file: ./src/mapping.ts

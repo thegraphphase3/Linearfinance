@@ -17,3 +17,15 @@ type Approvaltx @entity {
   blockNumber: BigInt!
   blockTimestamp: BigInt!
 }
+
+
+type Adminchangedtx @entity {
+  id: ID!
+  oldAdmin: Bytes!
+  newAdmin: Bytes!
+  numberBlock: BigInt
+  author: Bytes!
+  transaction: Bytes!
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+}
