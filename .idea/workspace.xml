@@ -123,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607348388014</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="second">
+      <created>1607367717019</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607367717019</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -136,17 +143,20 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="342" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1607333591182" />
-    <state x="264" y="2" key="CommitChangelistDialog2" timestamp="1607348387499">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="264" y="23" key="CommitChangelistDialog2" timestamp="1607367716452">
+      <screen x="0" y="23" width="1280" height="724" />
     </state>
     <state x="264" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607348387499" />
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1607348390269">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="264" y="23" key="CommitChangelistDialog2/0.23.1280.724@0.23.1280.724" timestamp="1607367716452" />
+    <state x="240" y="150" key="Vcs.Push.Dialog.v2" timestamp="1607367718965">
+      <screen x="0" y="23" width="1280" height="724" />
     </state>
     <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607348390269" />
-    <state x="317" y="232" key="com.intellij.ide.util.TipDialog" timestamp="1607333264353">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="240" y="150" key="Vcs.Push.Dialog.v2/0.23.1280.724@0.23.1280.724" timestamp="1607367718965" />
+    <state x="317" y="233" key="com.intellij.ide.util.TipDialog" timestamp="1607513454600">
+      <screen x="0" y="25" width="1280" height="716" />
     </state>
     <state x="317" y="232" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1607333264353" />
+    <state x="317" y="233" key="com.intellij.ide.util.TipDialog/0.25.1280.716@0.25.1280.716" timestamp="1607513454600" />
   </component>
 </project>

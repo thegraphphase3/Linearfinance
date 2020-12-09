@@ -1,6 +1,7 @@
 import { Transfer, Approval, AdminChanged, ProxyUpdated, candidateChanged } from '../generated/LinearFinance/LinearFinance'
 import { Transfertx, Approvaltx, Adminchangedtx, ProxyUpdatedtx, candidateChangedtx } from '../generated/schema'
 import { LinearFinance } from '../generated/LinearFinance/LinearFinance'
+import { ethereum }  from "@graphprotocol/graph-ts";
 
 
 export function handleTransfer(event: Transfer): void {
@@ -11,13 +12,19 @@ export function handleTransfer(event: Transfer): void {
 
   // récup infos
   let erc20Symbol = contract.symbol()
+  let totalSupply = contract.totalSupply()
+  let maxSupply = contract.MAX_SUPPLY()
 
   let transfertx = new Transfertx(id)
 
-  //transfertx.erc20Symbol = s.toI32(erc20Symbol)
+  transfertx.erc20Symbol = erc20Symbol
+  transfertx.totalSupply = totalSupply
+  transfertx.maxSupply = maxSupply
+  transfertx.balanceBeforeFrom = ethereum.Value.fromAddress(event.params.from).toBigInt()
+  transfertx.balanceBeforeTo = ethereum.Value.fromAddress(event.params.to).toBigInt()
 
-  //transfertx.erc20Symbol = s.params.from
 
+  // Usually
   transfertx.from = event.params.from
   transfertx.to = event.params.to
   transfertx.value = event.params.value
@@ -31,10 +38,24 @@ export function handleTransfer(event: Transfer): void {
 
 export function handleApproval(event: Approval): void {
   let id = event.transaction.hash.toHex()
+  let contract = LinearFinance.bind(event.address)
+
+  // 2
+  let erc20Symbol = contract.symbol()
+  let totalSupply = contract.totalSupply()
+  let maxSupply = contract.MAX_SUPPLY()
 
 
   let Approvaltx = new Approvaltx(id)
 
+  // 3
+  Approvaltx.erc20Symbol = erc20Symbol
+  Approvaltx.totalSupply = totalSupply
+  Approvaltx.maxSupply = maxSupply
+  Approvaltx.balanceBeforeFrom = ethereum.Value.fromAddress(event.params.owner).toBigInt()
+  Approvaltx.balanceBeforeTo = ethereum.Value.fromAddress(event.params.spender).toBigInt()
+
+  // Value
   Approvaltx.owner = event.params.owner
   Approvaltx.spender = event.params.spender
   Approvaltx.value = event.params.value

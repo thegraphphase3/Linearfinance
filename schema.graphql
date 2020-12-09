@@ -1,7 +1,11 @@
 type Transfertx @entity {
   id: ID!
   from: Bytes!
-  erc20Symbol: Bytes!
+  erc20Symbol: String
+  totalSupply: BigInt!
+  maxSupply: BigInt!
+  balanceBeforeFrom: BigInt!
+  balanceBeforeTo: BigInt!
   to: Bytes!
   value: BigInt!
   transaction: Bytes! # tx hash
@@ -14,6 +18,12 @@ type Approvaltx @entity {
   owner: Bytes!
   spender: Bytes!
   value: BigInt!
+  erc20Symbol: String
+  totalSupply: BigInt!
+  maxSupply: BigInt!
+  balanceBeforeFrom: BigInt!
+  balanceBeforeTo: BigInt!
+
   transaction: Bytes! # tx hash
   blockNumber: BigInt!
   blockTimestamp: BigInt!

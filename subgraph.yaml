@@ -35,5 +35,4 @@ dataSources:
           handler: handleProxyUpdated
         - event: candidateChanged(address,address)
           handler: handlecandidateChanged
-
       file: ./src/mapping.ts
